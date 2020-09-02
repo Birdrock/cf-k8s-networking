@@ -1,0 +1,28 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  annotations:
+    kapp.k14s.io/identity: v1;cf-system/networking.istio.io/VirtualService/cf-api-external-virtual-service;networking.istio.io/v1alpha3
+    kapp.k14s.io/original: '{"apiVersion":"networking.istio.io/v1alpha3","kind":"VirtualService","metadata":{"labels":{"kapp.k14s.io/app":"1598909974852931300","kapp.k14s.io/association":"v1.2c5fdf8d86d78c2c038709e2405af32c"},"name":"cf-api-external-virtual-service","namespace":"cf-system"},"spec":{"gateways":["cf-system/istio-ingressgateway"],"hosts":["api.contour-spike.routing.lol"],"http":[{"route":[{"destination":{"host":"capi.cf-system.svc.cluster.local","port":{"number":80}}}]}]}}'
+    kapp.k14s.io/original-diff-md5: c6e94dc94aed3401b5d0f26ed6c0bff3
+  creationTimestamp: "2020-08-31T21:40:09Z"
+  generation: 1
+  labels:
+    kapp.k14s.io/app: "1598909974852931300"
+    kapp.k14s.io/association: v1.2c5fdf8d86d78c2c038709e2405af32c
+  name: cf-api-external-virtual-service
+  namespace: cf-system
+  resourceVersion: "2664"
+  selfLink: /apis/networking.istio.io/v1beta1/namespaces/cf-system/virtualservices/cf-api-external-virtual-service
+  uid: 9e9b0009-3f13-45b1-b820-fdefff4c98c2
+spec:
+  gateways:
+  - cf-system/istio-ingressgateway
+  hosts:
+  - api.contour-spike.routing.lol
+  http:
+  - route:
+    - destination:
+        host: capi.cf-system.svc.cluster.local
+        port:
+          number: 80

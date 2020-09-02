@@ -1,0 +1,31 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  annotations:
+    kapp.k14s.io/identity: v1;cf-system/networking.istio.io/VirtualService/uaa-external-virtual-service;networking.istio.io/v1alpha3
+    kapp.k14s.io/original: '{"apiVersion":"networking.istio.io/v1alpha3","kind":"VirtualService","metadata":{"labels":{"kapp.k14s.io/app":"1598909974852931300","kapp.k14s.io/association":"v1.d68e30d00fb810e30728aef7f2cd39aa"},"name":"uaa-external-virtual-service","namespace":"cf-system"},"spec":{"gateways":["cf-system/istio-ingressgateway"],"hosts":["uaa.contour-spike.routing.lol","*.uaa.contour-spike.routing.lol","login.contour-spike.routing.lol","*.login.contour-spike.routing.lol"],"http":[{"route":[{"destination":{"host":"uaa.cf-system.svc.cluster.local","port":{"number":8080}}}]}]}}'
+    kapp.k14s.io/original-diff-md5: c6e94dc94aed3401b5d0f26ed6c0bff3
+  creationTimestamp: "2020-08-31T21:40:06Z"
+  generation: 1
+  labels:
+    kapp.k14s.io/app: "1598909974852931300"
+    kapp.k14s.io/association: v1.d68e30d00fb810e30728aef7f2cd39aa
+  name: uaa-external-virtual-service
+  namespace: cf-system
+  resourceVersion: "2570"
+  selfLink: /apis/networking.istio.io/v1beta1/namespaces/cf-system/virtualservices/uaa-external-virtual-service
+  uid: 8a5c6cdf-f2bd-46fd-aab0-a7f4719ea5fb
+spec:
+  gateways:
+  - cf-system/istio-ingressgateway
+  hosts:
+  - uaa.contour-spike.routing.lol
+  - '*.uaa.contour-spike.routing.lol'
+  - login.contour-spike.routing.lol
+  - '*.login.contour-spike.routing.lol'
+  http:
+  - route:
+    - destination:
+        host: uaa.cf-system.svc.cluster.local
+        port:
+          number: 8080
